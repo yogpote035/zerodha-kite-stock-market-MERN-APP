@@ -1,0 +1,34 @@
+button {
+    outline: none;
+    box-shadow: none;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.open-account:hover {
+    background-color: #1c1b1b;
+}
+
+i {
+    color: #424242;
+}
+
+
+.custom-link-footer {
+    color: #615c5c !important;
+    text-decoration: none;
+    display: block;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.custom-link-footer:hover {
+    color: #387ed1 !important;
+}
+
+.footer-container{
+    background-color: #fbfbfb;
+}

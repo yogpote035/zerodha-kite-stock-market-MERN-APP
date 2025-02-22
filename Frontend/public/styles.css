@@ -1,0 +1,38 @@
+.nav-link {
+  color: rgb(53, 49, 49);
+  transition: color 0.3s;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  color: var(--bs-primary) !important;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+a:hover {
+  color: black !important;
+  cursor: pointer;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+body {
+  color: #424242 !important;
+}
