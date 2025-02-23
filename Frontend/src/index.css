@@ -29,6 +29,101 @@ i {
     color: #387ed1 !important;
 }
 
-.footer-container{
+.footer-container {
     background-color: #fbfbfb;
+}
+
+
+.below-input-link {
+    color: white !important;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid white;
+    font-size: 17px;
+}
+
+.below-input-link2 {
+    margin-inline-start: 20px;
+}
+
+.below-input-link3 {
+    display: block;
+    width: 9rem;
+    margin-top: .7rem;
+
+}
+
+.below-input-link:hover {
+    color: white !important;
+}
+
+.Order-support2-li {
+    color: white !important;
+}
+
+.Order-support2-li:hover {
+    color: white !important;
+}
+
+li {
+    color: white !important;
+
+}
+
+
+.support-head-w-icon {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #222 !important;
+}
+
+.support-head-w-icon:hover,
+.support-head-w-icon:hover i {
+    color: #387ed1 !important;
+}
+
+.link-support {
+    display: block;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.link-support:hover {
+    color: #666 !important;
+}
+
+input {
+    width: 39rem !important;
+    height: 4rem;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 2px;
+    border: none;
+    padding: 2%;
+}
+
+
+.up-main-head {
+    font-size: 1.275rem !important;
+    color: #fff !important;
+}
+
+.up-main-head2 {
+    padding-bottom: .5rem;
+    ;
+    border-bottom: 1px solid white;
+    font-size: 1.100rem !important;
+
+}
+
+
+
+
+
+.input-form-user {
+    width: 24rem !important;
+}
+
+.active {
+    color: #387ed1 !important;
 }

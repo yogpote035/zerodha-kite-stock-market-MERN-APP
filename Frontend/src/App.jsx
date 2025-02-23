@@ -3,7 +3,8 @@ import AboutPAge from "./landing_page/About/AboutPage";
 import SupportPage from "./landing_page/Support/SupportPage";
 import PricingPage from "./landing_page/Pricing/PricingPage";
 import Signup from "./landing_page/Signup/Signup";
-import ProductPage from "./landing_page/Products/ProductPage";
+import Login from "./landing_page/Login/Login";
+import ProductPage from "./landing_page/Products/ProductsPage";
 import NotFound from "./landing_page/NotFound";
 import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -21,6 +22,7 @@ function App() {
           <Route path="about" element={<AboutPAge />} />
           <Route path="/products" element={<ProductPage />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

@@ -48,6 +48,7 @@ app.get('/orders', async (request, response) => {
 //add Order
 
 app.post('/orders', async (request, response) => {
+    
     let { name, qty, price, mode } = request.body;
 
     let newOrder = new OrderModel({

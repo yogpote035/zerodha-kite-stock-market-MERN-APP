@@ -1,13 +1,16 @@
 import React from "react";
-import CreateTicket from "./CreateTicket";
+
 import Hero from "./Hero";
-function SupportPage() {
+import CreateTicket from "./CreateTicket";
+
+
+function PricingPage() {
   return (
-    <div  style={{marginTop:"5rem"}}>
+    <div style={{marginTop:"3rem"}}>
       <Hero />
       <CreateTicket />
     </div>
   );
 }
 
-export default SupportPage;
+export default PricingPage;

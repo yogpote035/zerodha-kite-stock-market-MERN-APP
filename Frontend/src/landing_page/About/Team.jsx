@@ -39,103 +39,105 @@ function Team() {
         </div>
       </div>
       {/* 1st row */}
-      <div className="row p-2">
-        <div className="col p-2">
-          <img
-            src="media_images/Nikhil.jpg"
-            width="65%"
-            alt="CEO PICTURE"
-            style={{ borderRadius: "50%" }}
-          />
-          <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
-            Nikhil Kamath
-            <br />
-            <small className="text-muted fs-6">Co-founder & CFO</small>
-          </p>
+      <div className="mainTeam " style={{marginInlineStart:"6rem"}}>
+        <div className="row p-2">
+          <div className="col p-2">
+            <img
+              src="media_images/Nikhil.jpg"
+              width="65%"
+              alt="CEO PICTURE"
+              style={{ borderRadius: "50%" }}
+            />
+            <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
+              Nikhil Kamath
+              <br />
+              <small className="text-muted fs-6">Co-founder & CFO</small>
+            </p>
+          </div>
+          <div className="col p-2">
+            <img
+              src="media_images/Kailash.jpg"
+              width="65%"
+              alt="CEO PICTURE"
+              style={{ borderRadius: "50%" }}
+            />
+            <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
+              Dr. Kailash Nadh
+              <br />
+              <small className="text-muted fs-6">CTO</small>
+            </p>
+          </div>
+          <div className="col p-2">
+            <img
+              src="media_images/Venu.jpg"
+              width="65%"
+              alt="CEO PICTURE"
+              style={{ borderRadius: "50%" }}
+            />
+            <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
+              Venu Madhav
+              <br />
+              <small className="text-muted fs-6">COO</small>
+            </p>
+          </div>
         </div>
-        <div className="col p-2">
-          <img
-            src="media_images/Kailash.jpg"
-            width="65%"
-            alt="CEO PICTURE"
-            style={{ borderRadius: "50%" }}
-          />
-          <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
-            Dr. Kailash Nadh
-            <br />
-            <small className="text-muted fs-6">CTO</small>
-          </p>
+        {/* 2nd row */}
+        <div className="row p-2">
+          <div className="col p-2">
+            <img
+              src="media_images/Hanan.jpg"
+              width="65%"
+              alt="CEO PICTURE"
+              style={{ borderRadius: "50%" }}
+            />
+            <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
+              Hanan Delvi
+              <br />
+              <small className="text-muted fs-6">CCO</small>
+            </p>
+          </div>
+          <div className="col p-2">
+            <img
+              src="media_images/Seema.jpg"
+              width="65%"
+              alt="CEO PICTURE"
+              style={{ borderRadius: "50%" }}
+            />
+            <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
+              Seema Patil
+              <br />
+              <small className="text-muted fs-6">Director</small>
+            </p>
+          </div>
+          <div className="col p-2">
+            <img
+              src="media_images/karthik.jpg"
+              width="65%"
+              alt="CEO PICTURE"
+              style={{ borderRadius: "50%" }}
+            />
+            <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
+              Karthik Rangappa
+              <br />
+              <small className="text-muted fs-6">Chief of Education</small>
+            </p>
+          </div>
         </div>
-        <div className="col p-2">
-          <img
-            src="media_images/Venu.jpg"
-            width="65%"
-            alt="CEO PICTURE"
-            style={{ borderRadius: "50%" }}
-          />
-          <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
-            Venu Madhav
-            <br />
-            <small className="text-muted fs-6">COO</small>
-          </p>
-        </div>
-      </div>
-      {/* 2nd row */}
-      <div className="row p-2">
-        <div className="col p-2">
-          <img
-            src="media_images/Hanan.jpg"
-            width="65%"
-            alt="CEO PICTURE"
-            style={{ borderRadius: "50%" }}
-          />
-          <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
-            Hanan Delvi
-            <br />
-            <small className="text-muted fs-6">CCO</small>
-          </p>
-        </div>
-        <div className="col p-2">
-          <img
-            src="media_images/Seema.jpg"
-            width="65%"
-            alt="CEO PICTURE"
-            style={{ borderRadius: "50%" }}
-          />
-          <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
-            Seema Patil
-            <br />
-            <small className="text-muted fs-6">Director</small>
-          </p>
-        </div>
-        <div className="col p-2">
-          <img
-            src="media_images/karthik.jpg"
-            width="65%"
-            alt="CEO PICTURE"
-            style={{ borderRadius: "50%" }}
-          />
-          <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
-            Karthik Rangappa
-            <br />
-            <small className="text-muted fs-6">Chief of Education</small>
-          </p>
-        </div>
-      </div>
-      {/* 3rd row */}
-      <div className="row p-2">
-        <div className="col-4 p-2">
-          <img
-            src="media_images/Nikhil.jpg"
-            width="65%"
-            alt="CEO PICTURE"
-            style={{ borderRadius: "50%" }}
-          />
-          <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
-            Austin Prakesh
-            <br />
-            <small className="text-muted fs-6">Director Strategy</small>
-          </p>
+        {/* 3rd row */}
+        <div className="row p-2">
+          <div className="col-4 p-2">
+            <img
+              src="media_images/Nikhil.jpg"
+              width="65%"
+              alt="CEO PICTURE"
+              style={{ borderRadius: "50%" }}
+            />
+            <p className="fs-4 mx-5" style={{ color: "rgb(66,66,66)" }}>
+              Austin Prakesh
+              <br />
+              <small className="text-muted fs-6">Director Strategy</small>
+            </p>
+          </div>
         </div>
       </div>
     </div>
