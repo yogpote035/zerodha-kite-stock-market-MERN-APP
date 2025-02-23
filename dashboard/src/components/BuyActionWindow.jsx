@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import axios from "axios";
 
@@ -11,6 +11,7 @@ const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
+  const navigate = useNavigate();
   const handleBuyClick = () => {
     axios.post("http://localhost:3002/orders", {
       name: uid,
@@ -18,8 +19,10 @@ const BuyActionWindow = ({ uid }) => {
       price: stockPrice,
       mode: "BUY",
     });
-
+    
     GeneralContext.closeBuyWindow();
+    navigate("/orders");
+
   };
 
   const handleCancelClick = () => {
@@ -55,7 +58,7 @@ const BuyActionWindow = ({ uid }) => {
       </div>
 
       <div className="buttons">
-        <span>Margin required ₹140.65</span>
+        <span>Margin required ₹{stockQuantity * stockPrice}</span>
         <div>
           <Link className="btn btn-blue" onClick={handleBuyClick}>
             Buy

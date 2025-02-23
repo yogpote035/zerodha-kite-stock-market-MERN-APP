@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect,useContext } from "react";
 
 import axios from "axios";
 
@@ -13,12 +13,20 @@ import {
   MoreHoriz,
 } from "@mui/icons-material";
 
-import { watchlist } from "../data/data";
 import { DoughnutChart } from "./DoughnoutChart";
 
-const labels = watchlist.map((subArray) => subArray["name"]);
 
 const WatchList = () => {
+
+  const [watchlist, setWatchlist] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:3002/watchlist").then((res) => {
+      setWatchlist(res.data);
+    });
+  }, []);
+
+  const labels = watchlist.map((subArray) => subArray["name"]);
   const data = {
     labels,
     datasets: [
@@ -26,12 +34,12 @@ const WatchList = () => {
         label: "Price",
         data: watchlist.map((stock) => stock.price),
         backgroundColor: [
-          "rgba(255, 99, 132, 0.5)",
-          "rgba(54, 162, 235, 0.5)",
-          "rgba(255, 206, 86, 0.5)",
-          "rgba(75, 192, 192, 0.5)",
-          "rgba(153, 102, 255, 0.5)",
-          "rgba(255, 159, 64, 0.5)",
+          "rgb(254, 0, 55)",
+          "rgb(6, 141, 232)",
+          "rgb(247, 178, 4)",
+          "rgb(0, 197, 197)",
+          "rgb(83, 0, 249)",
+          "rgb(241, 120, 0)",
         ],
         borderColor: [
           "rgba(255, 99, 132, 1)",
@@ -41,38 +49,12 @@ const WatchList = () => {
           "rgba(153, 102, 255, 1)",
           "rgba(255, 159, 64, 1)",
         ],
-        borderWidth: 1,
+        borderWidth: 3,
       },
     ],
   };
 
-  // export const data = {
-  //   labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-  // datasets: [
-  //   {
-  //     label: "# of Votes",
-  //     data: [12, 19, 3, 5, 2, 3],
-  //     backgroundColor: [
-  //       "rgba(255, 99, 132, 0.2)",
-  //       "rgba(54, 162, 235, 0.2)",
-  //       "rgba(255, 206, 86, 0.2)",
-  //       "rgba(75, 192, 192, 0.2)",
-  //       "rgba(153, 102, 255, 0.2)",
-  //       "rgba(255, 159, 64, 0.2)",
-  //     ],
-  //     borderColor: [
-  //       "rgba(255, 99, 132, 1)",
-  //       "rgba(54, 162, 235, 1)",
-  //       "rgba(255, 206, 86, 1)",
-  //       "rgba(75, 192, 192, 1)",
-  //       "rgba(153, 102, 255, 1)",
-  //       "rgba(255, 159, 64, 1)",
-  //     ],
-  //     borderWidth: 1,
-  //   },
-  // ],
-  // };
-
+ 
   return (
     <div className="watchlist-container">
       <div className="search-container">
