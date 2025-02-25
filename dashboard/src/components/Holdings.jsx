@@ -11,7 +11,7 @@ const Holdings = () => {
   }
 
   useEffect(() => {
-    axios.get("http://localhost:3002/holdings", { headers }).then((res) => {
+    axios.get("https://zerodha-yogesh.onrender.com/holdings", { headers }).then((res) => {
       setAllHoldings(res.data);
     });
   }, []);

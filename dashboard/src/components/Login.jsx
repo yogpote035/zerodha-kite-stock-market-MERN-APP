@@ -17,7 +17,7 @@ function Login({ showAlert }) {
             const headers = {
                 "Content-Type": "application/json"
             };
-            const response = await axios.post("http://localhost:3002/login", {
+            const response = await axios.post("https://zerodha-yogesh.onrender.com/login", {
                 email: formData.email,
                 password: formData.password,
             }, { headers });
@@ -33,7 +33,6 @@ function Login({ showAlert }) {
             if (err.status == 404) {
                 alert(err.response.data.error);
             }
-            alert(`Login failed: ${err.message}`);
         }
     };
 

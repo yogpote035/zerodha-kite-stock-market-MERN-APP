@@ -23,7 +23,7 @@ const WatchList = () => {
     authToken: localStorage.getItem("token")
   }
   useEffect(() => {
-    axios.get("http://localhost:3002/watchlist", {headers}).then((res) => {
+    axios.get("https://zerodha-yogesh.onrender.com/watchlist", {headers}).then((res) => {
       setWatchlist(res.data);
     });
   }, []);

@@ -8,7 +8,7 @@ const Positions = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:3002/positions", { headers }).then((res) => {
+    axios.get("https://zerodha-yogesh.onrender.com/positions", { headers }).then((res) => {
       setPositions(res.data);
     });
   }, []);

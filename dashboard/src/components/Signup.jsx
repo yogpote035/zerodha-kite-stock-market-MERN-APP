@@ -20,7 +20,7 @@ function Signup({ showAlert }) {
             const headers = {
                 "Content-Type": "application/json"
             };
-            const response = await axios.post("http://localhost:3002/signup", {
+            const response = await axios.post("https://zerodha-yogesh.onrender.com/signup", {
                 name: formData.name,
                 email: formData.email,
                 password: formData.password,

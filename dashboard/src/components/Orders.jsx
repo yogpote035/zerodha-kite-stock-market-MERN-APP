@@ -10,13 +10,13 @@ const Orders = () => {
   }
 
   useEffect(() => {
-    axios.get("http://localhost:3002/orders", { headers }).then((res) => {
+    axios.get("https://zerodha-yogesh.onrender.com/orders", { headers }).then((res) => {
       setOrders(res.data);
     });
   }, []);
 
   const cancelOrder = (id) => {
-    axios.delete(`http://localhost:3002/orders/${id}`, { headers }).then(() => {
+    axios.delete(`https://zerodha-yogesh.onrender.com/orders/${id}`, { headers }).then(() => {
       setOrders(orders.filter(order => order._id !== id));  // Note: Use !== instead of !=
     }).catch((error) => {
       console.log('Error In Deletion :', error);
