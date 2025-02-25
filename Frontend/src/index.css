@@ -92,7 +92,7 @@ li {
     color: #666 !important;
 }
 
-input {
+.hero-support-input {
     width: 39rem !important;
     height: 4rem;
     outline: none !important;
@@ -126,4 +126,13 @@ input {
 
 .active {
     color: #387ed1 !important;
+}
+
+
+.bt-open-acc {
+    color: white !important;
+}
+
+.bt-open-acc:hover {
+    color: white !important;
 }

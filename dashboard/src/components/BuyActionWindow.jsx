@@ -12,14 +12,17 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const navigate = useNavigate();
+  const headers = {
+    authToken: localStorage.getItem("token")
+  }
   const handleBuyClick = () => {
     axios.post("http://localhost:3002/orders", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
       mode: "BUY",
-    });
-    
+    }, {headers});
+
     GeneralContext.closeBuyWindow();
     navigate("/orders");
 

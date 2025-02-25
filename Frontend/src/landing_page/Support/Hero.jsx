@@ -19,7 +19,7 @@ function Hero() {
               Search for an answer or browse help topics to create a ticket
             </h1>
             <div className="input-group">
-              <input type="text" className="f" placeholder="Eg. how do I activate F&O" style={{ boxShadow: "none", outline: "none" }} />
+              <input type="text" className="hero-support-input" placeholder="Eg. how do I activate F&O" style={{ boxShadow: "none", outline: "none" }} />
               <button className="btn btn-dark " type="button">
                 <i className="fas fa-search text-info"></i>
               </button>

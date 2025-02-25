@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 import axios from "axios";
 
@@ -19,9 +19,11 @@ import { DoughnutChart } from "./DoughnoutChart";
 const WatchList = () => {
 
   const [watchlist, setWatchlist] = useState([]);
-
+  const headers = {
+    authToken: localStorage.getItem("token")
+  }
   useEffect(() => {
-    axios.get("http://localhost:3002/watchlist").then((res) => {
+    axios.get("http://localhost:3002/watchlist", {headers}).then((res) => {
       setWatchlist(res.data);
     });
   }, []);
@@ -54,7 +56,7 @@ const WatchList = () => {
     ],
   };
 
- 
+
   return (
     <div className="watchlist-container">
       <div className="search-container">

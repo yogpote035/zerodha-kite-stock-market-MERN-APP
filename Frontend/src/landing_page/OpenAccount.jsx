@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 function OpenAccount() {
   return (
     <>
@@ -10,9 +12,7 @@ function OpenAccount() {
             F&O trades.
           </p>
           <div className="d-flex justify-content-center">
-            <button className="btn w-25 btn-primary text-center fs-5 open-account fw-bold">
-              Signup now
-            </button>
+            <a href="http://localhost:5174/" className="btn btn-lg btn-primary bt-open-acc"> Signup now</a>
           </div>
         </div>
       </div>

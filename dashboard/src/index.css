@@ -267,7 +267,7 @@ code {
 .menus {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .menus ul {
@@ -278,6 +278,7 @@ code {
   display: inline-block;
   margin-right: 30px;
   text-decoration: none;
+  margin-top: 1.5rem;
 }
 
 .menu {
@@ -389,7 +390,7 @@ hr {
   font-size: .9rem;
 }
 
-.btn-cancel-orders:hover{
+.btn-cancel-orders:hover {
   color: white;
   background-color: red;
   /* border: 2px solid red; */
@@ -858,4 +859,22 @@ hr {
 
 .action:hover {
   background-color: rgb(212, 212, 212);
+}
+
+.btn-outline-danger {
+  margin-top: 2rem;
+  width: 7rem;
+  height: 3rem;
+  color:red;
+  background: transparent;
+  padding: .3rem;
+  border: 1px solid red;
+  border-radius: 30px;
+}
+
+.btn-outline-danger:hover{
+  color:white;
+  background: red;
+  border:none;
+
 }

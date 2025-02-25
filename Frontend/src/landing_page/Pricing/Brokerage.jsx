@@ -1,4 +1,5 @@
 import React from "react";
+import OpenAccount from "../OpenAccount";
 
 function Brokerage() {
   return (

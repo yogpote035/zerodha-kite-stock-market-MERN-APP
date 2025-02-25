@@ -1,18 +1,41 @@
-import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import './App.css'
+import React, { useEffect } from "react";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import './App.css';
 import Home from "./components/Home";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 function App() {
 
+
+
+
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/*" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/*" element={<ProtectedRoutes />}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+
+
+
+
+const ProtectedRoutes = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login");
+    }
+  }, [navigate]);
+
+  return <Home />;
+};
+
+
+export default App;

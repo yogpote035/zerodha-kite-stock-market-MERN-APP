@@ -1,114 +1,51 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import { NavLink } from "react-router-dom";
+import React from 'react'
+import OpenAccount from '../OpenAccount'
 
-const Signup = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: ''
-  });
-
-  const [error, setError] = useState(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError(null);
-
-    try {
-      // Send POST request to your backend with form data
-      const response = await axios.post('https://your-backend-api-url.com/signup', formData);
-      // Handle success
-      console.log('Signup successful', response.data);
-      // You can redirect or show a success message here
-    } catch (err) {
-      // Handle error
-      setError('Something went wrong. Please try again later.');
-      console.error(err);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
+function Signup() {
   return (
-    <div className="container" style={{ marginTop: "6rem", marginBottom: "6rem", maxWidth: "500px" }}>
-      <div className="card shadow-lg border-0 rounded-4 p-5">
-        <h2 className='text-center text-primary mb-4'>Sign Up</h2>
+    <div className='container' style={{ marginTop: "5rem" }}>
+      <div className="mb-5" style={{ marginTop: "9rem" }}>
+        <h1 className=' fw-bold text-center' style={{ lineHeight: "4rem", fontSize: "3rem" }}>Open a free demat and trading account online
+        </h1>
+        <p className='text-center text-muted fs-5'>Start investing brokerage free and join a community of 1.5+ crore investors and traders
+        </p>
+      </div>
 
-        <form onSubmit={handleSubmit}>
-          {error && <div className="alert alert-danger">{error}</div>}
+      <div className="row gap-5">
+        <div className="col">
+          <img src="media_images/account_open.svg" alt="account_open" />
+        </div>
+        <div className="col">
+          <h1 className="fs-2">Signup now
+          </h1>
+          <p className="text-muted mt-2 mb-2">Or track your existing application
+          </p>
 
-          <div className="mb-3">
-            <label htmlFor="name" className="form-label">Name</label>
-            <input
-              type="text"
-              className="form-control rounded-3  input-form-user"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              placeholder="Enter your name"
-            />
+          <div class="input-group input-group-lg">
+            <span class="input-group-text" id="inputGroup-sizing-lg">+91</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style={{ outline: "none", boxShadow: "none" }} />
           </div>
+          <p className="fs-6 text-muted mt-1"><small>You will receive an OTP on your number</small></p>
 
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label">Email address</label>
-            <input
-              type="email"
-              className="form-control rounded-3 input-form-user"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              placeholder="Enter your email"
-            />
-          </div>
-
-          <div className="mb-3">
-            <label htmlFor="password" className="form-label">Password</label>
-            <input
-              type="password"
-              className="form-control rounded-3  input-form-user"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-              placeholder="Create a password"
-            />
-          </div>
-
-          <div className="d-grid gap-2">
+          <div className="d-flex justify-content-center">
             <button
               type="submit"
-              className="btn btn-primary rounded-3  input-form-user"
-              disabled={isSubmitting}
+              className="btn btn-lg btn-outline-success rounded-3"
             >
-              {isSubmitting ? 'Signing Up...' : 'Sign Up'}
+              Continue
             </button>
           </div>
-        </form>
 
-        <div className="text-center mt-4">
-          <p className="text-muted">
-            Already have an account? <NavLink to="/login" className="text-primary">Login</NavLink>
-          </p>
+          <p><small className='text-primary'>Want to open an NRI account?
+          </small></p>
+          <p><small>By proceeding, you agree to the Zerodha <span className='text-primary'> terms</span> &  <span className='text-primary'>privacy policy</span>
+          </small></p>
         </div>
       </div>
-    </div>
-  );
-};
 
-export default Signup;
+      <OpenAccount/>
+    </div>
+  )
+}
+
+export default Signup

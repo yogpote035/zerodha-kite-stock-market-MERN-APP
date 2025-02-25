@@ -1,45 +1,88 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Menu = () => {
   const location = useLocation();
-  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
-
-  const handleProfileClick = () => {
-    setIsProfileDropdownOpen(!isProfileDropdownOpen);
-  };
-
-  const menuItems = [
-    { path: "/", label: "Dashboard" },
-    { path: "/orders", label: "Orders" },
-    { path: "/holdings", label: "Holdings" },
-    { path: "/positions", label: "Positions" },
-    { path: "/funds", label: "Funds" },
-    { path: "/apps", label: "Apps" },
-  ];
 
   return (
-    <div className="menu-container">
-      <img src="logo.png" alt="Logo" style={{ width: "50px" }} />
-      <div className="menus">
-        <ul>
-          {menuItems.map((item, index) => (
-            <li key={index}>
-              <Link style={{ textDecoration: "none" }} to={item.path}>
-                <p className={location.pathname === item.path ? "menu selected" : "menu"}>
-                  {item.label}
-                </p>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">
+          <img src="logo.png" alt="Logo" style={{ width: "50px" }} />
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${location.pathname === "/summary" ? "active" : ""}`}
+                to="/summary"
+              >
+                Dashboard
               </Link>
             </li>
-          ))}
-        </ul>
-        <hr />
-        <div className="profile" onClick={handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${location.pathname === "/orders" ? "active" : ""}`}
+                to="/orders"
+              >
+                Orders
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${location.pathname === "/holdings" ? "active" : ""}`}
+                to="/holdings"
+              >
+                Holdings
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${location.pathname === "/positions" ? "active" : ""}`}
+                to="/positions"
+              >
+                Positions
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${location.pathname === "/funds" ? "active" : ""}`}
+                to="/funds"
+              >
+                Funds
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${location.pathname === "/apps" ? "active" : ""}`}
+                to="/apps"
+              >
+                Apps
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${location.pathname === "/logout" ? "active" : ""}`}
+                to="/logout"
+              >
+                Logout
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
