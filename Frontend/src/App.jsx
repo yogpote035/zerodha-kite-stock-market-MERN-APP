@@ -9,7 +9,6 @@ import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Login from "../../dashboard/src/components/Login";
 function App() {
   return (
     <>

@@ -9,6 +9,6 @@ export default defineConfig({
     host: '0.0.0.0',
   },
   preview: {
-    allowedHosts: ['zerodha-kite-yogesh.onrender.com', 'all'],
+    allowedHosts: ['zerodha-5jyy.onrender.com', 'all'],
   }
 })
