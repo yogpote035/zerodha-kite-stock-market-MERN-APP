@@ -12,7 +12,7 @@ function OpenAccount() {
             F&O trades.
           </p>
           <div className="d-flex justify-content-center">
-            <a href="http://localhost:5174/" className="btn btn-lg btn-primary bt-open-acc"> Signup now</a>
+            <a href="https://zerodha-kite-yogesh.onrender.com" className="btn btn-lg btn-primary bt-open-acc"> Signup now</a>
           </div>
         </div>
       </div>
