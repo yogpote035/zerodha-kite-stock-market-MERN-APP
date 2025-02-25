@@ -1,4 +1,5 @@
 import React from "react";
+import OpenAccount from "../OpenAccount";
 function Hero() {
   return (
     <>
@@ -17,9 +18,7 @@ function Hero() {
             ETFs, bonds, and more.
           </p>
           <div className="d-flex justify-content-center">
-            <button className="btn w-25 btn-primary text-center fs-5 open-account fw-bold">
-              Signup now
-            </button>
+            <OpenAccount />
           </div>
         </div>
       </div>
